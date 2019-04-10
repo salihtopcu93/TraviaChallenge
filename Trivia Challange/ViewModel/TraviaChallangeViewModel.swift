@@ -14,28 +14,32 @@ protocol TraviaChallangeViewDelegate : class {
 }
 
 class TraviaChallangeViewModel {
-    var result: TraviaChallangeModel!
+    var result: TraviaChallangeModel?
     var delegate: TraviaChallangeViewDelegate?
     
     let urlString: String = "http://www.mocky.io/v2/5cab3da23000000b179049d2"
     
-    func getTriviaChallenge(completion: @escaping (TraviaChallangeModel?) -> Void) {
-
+    init() {
+        getTriviaChallenge()
+    }
+    
+    func getTriviaChallenge() {
         setLoading(true)
+        
         Alamofire.request( urlString).responseJSON
             { (response) in
                 guard let data = response.data else {return}
                 
                 do {
                     let result = try JSONDecoder().decode(TraviaChallangeModel.self, from: data)
+                    
                     self.result = result
-                    print(response)
-                    completion(result)
+                    self.delegate?.updatedList()
+                    
                 } catch let error {
                     print(error)
                 }
                 self.setLoading(false)
-            
         }
     }
     
@@ -43,4 +47,31 @@ class TraviaChallangeViewModel {
         UIApplication.shared.isNetworkActivityIndicatorVisible = isLoading
     }
     
+}
+
+enum AlertType {
+    case joker, elimination
+    
+    var title: String {
+        switch self {
+        case .joker:
+            return "Acele Et"
+        case .elimination:
+            return "Dikkat"
+        }
+    }
+    
+    var message: String {
+        switch self {
+        case .joker:
+            return "Zaman doluyor, joker kullan!"
+        case .elimination:
+            return "Elendiniz."
+        }
+    }
+    
+}
+
+enum ButtonState {
+    case trueAnswer, falseAnswer
 }

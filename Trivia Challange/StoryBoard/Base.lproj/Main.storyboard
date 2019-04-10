@@ -68,6 +68,9 @@
                                         <state key="normal" title="c)">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cE1-4O-KTV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADe-jn-vW7">
                                         <rect key="frame" x="20" y="347" width="255" height="30"/>
@@ -75,6 +78,9 @@
                                         <state key="normal" title="c) O2">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OaC-UT-Wtz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKY-Zo-kU3">
                                         <rect key="frame" x="20" y="297" width="255" height="30"/>
@@ -82,12 +88,18 @@
                                         <state key="normal" title="b) H2O">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fui-vM-eoK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JM-Rb-lTc">
                                         <rect key="frame" x="20" y="247" width="255" height="30"/>
                                         <state key="normal" title="a)">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="89z-4A-OBg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
