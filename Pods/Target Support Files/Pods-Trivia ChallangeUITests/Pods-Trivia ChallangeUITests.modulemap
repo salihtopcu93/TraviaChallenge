@@ -1,0 +1,6 @@
+framework module Pods_Trivia_ChallangeUITests {
+  umbrella header "Pods-Trivia ChallangeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

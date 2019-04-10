@@ -17,7 +17,7 @@ class TraviaChallangeViewModel {
     var result: TraviaChallangeModel?
     var delegate: TraviaChallangeViewDelegate?
     
-    let urlString: String = "http://www.mocky.io/v2/5cab3da23000000b179049d2"
+    let urlString: String = "http://www.mocky.io/v2/5cade73a2f000061283a993d"
     
     init() {
         getTriviaChallenge()
@@ -73,5 +73,5 @@ enum AlertType {
 }
 
 enum ButtonState {
-    case trueAnswer, falseAnswer
+    case trueAnswer, falseAnswer, selectedAnswer
 }

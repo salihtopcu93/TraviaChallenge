@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var questionCountLabel: UILabel!
     @IBOutlet weak var jokerCountLabel: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet weak var aButton: UIButton!
+    @IBOutlet weak var aButton: CustomButton!
     @IBOutlet weak var bButton: UIButton!
     @IBOutlet weak var cButton: UIButton!
     @IBOutlet weak var dButton: UIButton!
@@ -55,10 +55,10 @@ class ViewController: UIViewController {
         
         setCurrentAnswerIndex()
         
-        aButton.backgroundColor = .clear
-        bButton.backgroundColor = .clear
-        cButton.backgroundColor = .clear
-        dButton.backgroundColor = .clear
+        aButton.backgroundColor = .white
+        bButton.backgroundColor = .white
+        cButton.backgroundColor = .white
+        dButton.backgroundColor = .white
         
         questionView.isUserInteractionEnabled = true
         
@@ -104,10 +104,14 @@ class ViewController: UIViewController {
     
     func setColor(buttonTag: Int, buttonState: ButtonState) {
         var currentColor: UIColor = .clear
-        if buttonState == .trueAnswer {
-            currentColor = .green
-        } else {
-            currentColor = .red
+        
+        switch buttonState {
+        case .trueAnswer:
+            currentColor = UIColor.TraviaGreen
+        case .falseAnswer:
+            currentColor = UIColor.TraviaRed
+        case .selectedAnswer:
+            currentColor = .yellow
         }
         
         switch buttonTag {
@@ -147,18 +151,7 @@ class ViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func buttonSelected(_ sender: UIButton) {
-        switch sender.tag {
-        case 0:
-            aButton.backgroundColor = UIColor.yellow
-        case 1:
-            bButton.backgroundColor = UIColor.yellow
-        case 2:
-            cButton.backgroundColor = UIColor.yellow
-        case 3:
-            dButton.backgroundColor = UIColor.yellow
-        default:
-            break
-        }
+        setColor(buttonTag: sender.tag, buttonState: .selectedAnswer)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.checkAnswer(selectedButtonTag: sender.tag)

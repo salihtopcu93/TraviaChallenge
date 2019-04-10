@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		15891448B57B61D36C2FAAB3 /* Pods_Trivia_Challange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C191CFA1AA735FA33892C3A7 /* Pods_Trivia_Challange.framework */; };
+		17677F33225E137800241C98 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17677F32225E137800241C98 /* ColorExtension.swift */; };
+		17677F35225E167E00241C98 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17677F34225E167E00241C98 /* CustomButton.swift */; };
 		17A5E332225B66DF00D320BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5E331225B66DF00D320BA /* AppDelegate.swift */; };
 		17A5E334225B66DF00D320BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5E333225B66DF00D320BA /* ViewController.swift */; };
 		17A5E337225B66DF00D320BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A5E335225B66DF00D320BA /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17677F32225E137800241C98 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		17677F34225E167E00241C98 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		17A5E32E225B66DF00D320BA /* Trivia Challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trivia Challange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5E331225B66DF00D320BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A5E333225B66DF00D320BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,11 +124,12 @@
 		17A5E330225B66DF00D320BA /* Trivia Challange */ = {
 			isa = PBXGroup;
 			children = (
-				17A5E363225B6BDE00D320BA /* StoryBoard */,
+				17A5E363225B6BDE00D320BA /* Storyboard */,
 				17A5E35F225B6BAE00D320BA /* Model */,
 				17A5E362225B6BD200D320BA /* View */,
 				17A5E361225B6BC600D320BA /* Controller */,
 				17A5E360225B6BB700D320BA /* ViewModel */,
+				17677F32225E137800241C98 /* ColorExtension.swift */,
 				17A5E331225B66DF00D320BA /* AppDelegate.swift */,
 				17A5E338225B66E000D320BA /* Assets.xcassets */,
 				17A5E33A225B66E000D320BA /* LaunchScreen.storyboard */,
@@ -179,16 +184,17 @@
 		17A5E362225B6BD200D320BA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				17677F34225E167E00241C98 /* CustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		17A5E363225B6BDE00D320BA /* StoryBoard */ = {
+		17A5E363225B6BDE00D320BA /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				17A5E335225B66DF00D320BA /* Main.storyboard */,
 			);
-			path = StoryBoard;
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		749EF66403ED699AB5EA7C2D /* Pods */ = {
@@ -440,9 +446,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17677F33225E137800241C98 /* ColorExtension.swift in Sources */,
 				17A5E369225B70AE00D320BA /* TraviaChallangeViewModel.swift in Sources */,
 				17A5E334225B66DF00D320BA /* ViewController.swift in Sources */,
 				17A5E367225B6C7200D320BA /* Questions.swift in Sources */,
+				17677F35225E167E00241C98 /* CustomButton.swift in Sources */,
 				17A5E332225B66DF00D320BA /* AppDelegate.swift in Sources */,
 				17A5E365225B6C0E00D320BA /* TraviaChallangeModel.swift in Sources */,
 			);
