@@ -29,6 +29,8 @@ class ViewController: UIViewController {
     var jokerCount: Int = 0
     var currentButtonState: ButtonState = .trueAnswer
     
+    var isViewerModeOn: Bool = false
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -45,24 +47,42 @@ class ViewController: UIViewController {
     }
     
     func configureView() {
-        let initialQuestion = viewModel.result?.questions[self.currentQuestionIndex]
-        self.questionLabel.text = initialQuestion?.question
-        self.aButton.setTitle(initialQuestion?.a, for: .normal)
-        self.bButton.setTitle(initialQuestion?.b, for: .normal)
-        self.cButton.setTitle(initialQuestion?.c, for: .normal)
-        self.dButton.setTitle(initialQuestion?.d, for: .normal)
-        self.currentAnswer = initialQuestion?.correctAnswer ?? ""
-        
-        setCurrentAnswerIndex()
-        
-        aButton.backgroundColor = .white
-        bButton.backgroundColor = .white
-        cButton.backgroundColor = .white
-        dButton.backgroundColor = .white
-        
-        questionView.isUserInteractionEnabled = true
-        
-        questionCountLabel.text = "\(currentQuestionIndex + 1) / 12"
+        if self.currentQuestionIndex >= 12 {
+            print("bitti")
+        } else {
+            let initialQuestion = viewModel.result?.questions[self.currentQuestionIndex]
+            self.questionLabel.text = initialQuestion?.question
+            self.aButton.setTitle(initialQuestion?.a, for: .normal)
+            self.bButton.setTitle(initialQuestion?.b, for: .normal)
+            self.cButton.setTitle(initialQuestion?.c, for: .normal)
+            self.dButton.setTitle(initialQuestion?.d, for: .normal)
+            self.currentAnswer = initialQuestion?.correctAnswer ?? ""
+            
+            setCurrentAnswerIndex()
+            
+            aButton.backgroundColor = .white
+            bButton.backgroundColor = .white
+            cButton.backgroundColor = .white
+            dButton.backgroundColor = .white
+            
+            questionView.isUserInteractionEnabled = true
+            
+            questionCountLabel.text = "\(currentQuestionIndex + 1) / 12"
+            
+            if isViewerModeOn {
+                questionView.isUserInteractionEnabled = false
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    self.setColor(buttonTag: self.currentAnswerIndex, buttonState: .trueAnswer)
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        self.currentQuestionIndex += 1
+                        self.configureView()
+                    }
+                }
+            }
+            
+        }
     }
     
     func setCurrentAnswerIndex() {
@@ -143,7 +163,12 @@ class ViewController: UIViewController {
             }
             ))
         } else if alertType == .elimination {
-             alertController.addAction(UIAlertAction(title: "TAMAM", style: .cancel, handler: nil))
+             alertController.addAction(UIAlertAction(title: "TAMAM", style: .cancel, handler: {  action in
+                self.isViewerModeOn = true
+                self.currentQuestionIndex += 1
+                self.configureView()
+             }
+             ))
         }
         self.present(alertController, animated: true, completion: nil)
     }

@@ -10,6 +10,10 @@
 		15891448B57B61D36C2FAAB3 /* Pods_Trivia_Challange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C191CFA1AA735FA33892C3A7 /* Pods_Trivia_Challange.framework */; };
 		17677F33225E137800241C98 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17677F32225E137800241C98 /* ColorExtension.swift */; };
 		17677F35225E167E00241C98 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17677F34225E167E00241C98 /* CustomButton.swift */; };
+		17A2F314225F346800FC04BF /* Winners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F313225F346800FC04BF /* Winners.swift */; };
+		17A2F316225F34BC00FC04BF /* WinnersNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F315225F34BC00FC04BF /* WinnersNames.swift */; };
+		17A2F318225F35FA00FC04BF /* WinnersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F317225F35FA00FC04BF /* WinnersViewModel.swift */; };
+		17A2F31A225F36EE00FC04BF /* WinnersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F319225F36EE00FC04BF /* WinnersViewController.swift */; };
 		17A5E332225B66DF00D320BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5E331225B66DF00D320BA /* AppDelegate.swift */; };
 		17A5E334225B66DF00D320BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5E333225B66DF00D320BA /* ViewController.swift */; };
 		17A5E337225B66DF00D320BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A5E335225B66DF00D320BA /* Main.storyboard */; };
@@ -44,6 +48,10 @@
 /* Begin PBXFileReference section */
 		17677F32225E137800241C98 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		17677F34225E167E00241C98 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		17A2F313225F346800FC04BF /* Winners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Winners.swift; sourceTree = "<group>"; };
+		17A2F315225F34BC00FC04BF /* WinnersNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersNames.swift; sourceTree = "<group>"; };
+		17A2F317225F35FA00FC04BF /* WinnersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersViewModel.swift; sourceTree = "<group>"; };
+		17A2F319225F36EE00FC04BF /* WinnersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersViewController.swift; sourceTree = "<group>"; };
 		17A5E32E225B66DF00D320BA /* Trivia Challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trivia Challange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5E331225B66DF00D320BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A5E333225B66DF00D320BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +169,8 @@
 			children = (
 				17A5E364225B6C0E00D320BA /* TraviaChallangeModel.swift */,
 				17A5E366225B6C7200D320BA /* Questions.swift */,
+				17A2F313225F346800FC04BF /* Winners.swift */,
+				17A2F315225F34BC00FC04BF /* WinnersNames.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				17A5E368225B70AE00D320BA /* TraviaChallangeViewModel.swift */,
+				17A2F317225F35FA00FC04BF /* WinnersViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -177,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				17A5E333225B66DF00D320BA /* ViewController.swift */,
+				17A2F319225F36EE00FC04BF /* WinnersViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -447,11 +459,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				17677F33225E137800241C98 /* ColorExtension.swift in Sources */,
+				17A2F316225F34BC00FC04BF /* WinnersNames.swift in Sources */,
 				17A5E369225B70AE00D320BA /* TraviaChallangeViewModel.swift in Sources */,
 				17A5E334225B66DF00D320BA /* ViewController.swift in Sources */,
 				17A5E367225B6C7200D320BA /* Questions.swift in Sources */,
+				17A2F31A225F36EE00FC04BF /* WinnersViewController.swift in Sources */,
+				17A2F318225F35FA00FC04BF /* WinnersViewModel.swift in Sources */,
 				17677F35225E167E00241C98 /* CustomButton.swift in Sources */,
 				17A5E332225B66DF00D320BA /* AppDelegate.swift in Sources */,
+				17A2F314225F346800FC04BF /* Winners.swift in Sources */,
 				17A5E365225B6C0E00D320BA /* TraviaChallangeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

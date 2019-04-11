@@ -106,7 +106,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.79991227388381958" green="0.80005055665969849" blue="0.7999035120010376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.79991227388381958" green="0.80005055665969849" blue="0.7999035120010376" alpha="0.20111685739436619" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="7JM-Rb-lTc" firstAttribute="leading" secondItem="sdF-Bq-Gm0" secondAttribute="leading" constant="20" id="3XB-h5-Qgw"/>
                                     <constraint firstItem="ADe-jn-vW7" firstAttribute="leading" secondItem="sdF-Bq-Gm0" secondAttribute="leading" constant="20" id="6lO-Ar-78T"/>
@@ -163,6 +163,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Winners View Controller-->
+        <scene sceneID="weH-Pe-Ay0">
+            <objects>
+                <viewController id="JoY-0C-Efy" customClass="WinnersViewController" customModule="Trivia_Challange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XPd-Ic-1di">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winners Get" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsr-u5-nMq">
+                                <rect key="frame" x="50" y="110" width="275" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 15.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YV8-Ff-HDM">
+                                <rect key="frame" x="30" y="185" width="315" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEO-p2-UM6">
+                                <rect key="frame" x="50" y="279" width="275" height="332"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="42K-5v-Vst">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="332"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.20122689260563381" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="42K-5v-Vst" firstAttribute="leading" secondItem="GEO-p2-UM6" secondAttribute="leading" id="6P1-S5-LiC"/>
+                                    <constraint firstItem="42K-5v-Vst" firstAttribute="top" secondItem="GEO-p2-UM6" secondAttribute="top" id="LqO-j7-shp"/>
+                                    <constraint firstAttribute="trailing" secondItem="42K-5v-Vst" secondAttribute="trailing" id="fHy-dE-9TQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="42K-5v-Vst" secondAttribute="bottom" id="ltL-2C-Jfg"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YV8-Ff-HDM" firstAttribute="top" secondItem="dsr-u5-nMq" secondAttribute="bottom" constant="30" id="10c-1a-MHI"/>
+                            <constraint firstItem="GEO-p2-UM6" firstAttribute="top" secondItem="YV8-Ff-HDM" secondAttribute="bottom" constant="58" id="BZS-Y3-u3Q"/>
+                            <constraint firstItem="Y6v-b9-l9F" firstAttribute="trailing" secondItem="GEO-p2-UM6" secondAttribute="trailing" constant="50" id="Emt-Mn-Om5"/>
+                            <constraint firstItem="Y6v-b9-l9F" firstAttribute="trailing" secondItem="dsr-u5-nMq" secondAttribute="trailing" constant="50" id="FNS-W4-7Ny"/>
+                            <constraint firstItem="GEO-p2-UM6" firstAttribute="leading" secondItem="Y6v-b9-l9F" secondAttribute="leading" constant="50" id="FyJ-Q4-a86"/>
+                            <constraint firstItem="dsr-u5-nMq" firstAttribute="leading" secondItem="Y6v-b9-l9F" secondAttribute="leading" constant="50" id="GU4-ZP-jbi"/>
+                            <constraint firstItem="dsr-u5-nMq" firstAttribute="top" secondItem="Y6v-b9-l9F" secondAttribute="top" constant="90" id="cYV-Ve-kB9"/>
+                            <constraint firstItem="YV8-Ff-HDM" firstAttribute="leading" secondItem="Y6v-b9-l9F" secondAttribute="leading" constant="30" id="eqH-Gp-9dQ"/>
+                            <constraint firstItem="Y6v-b9-l9F" firstAttribute="trailing" secondItem="YV8-Ff-HDM" secondAttribute="trailing" constant="30" id="fdM-8g-eFI"/>
+                            <constraint firstItem="Y6v-b9-l9F" firstAttribute="bottom" secondItem="GEO-p2-UM6" secondAttribute="bottom" constant="56" id="nj0-Fk-wY7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y6v-b9-l9F"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NrC-ur-MeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1032.8" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
