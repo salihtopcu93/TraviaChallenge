@@ -167,7 +167,7 @@
         <!--Winners View Controller-->
         <scene sceneID="weH-Pe-Ay0">
             <objects>
-                <viewController id="JoY-0C-Efy" customClass="WinnersViewController" customModule="Trivia_Challange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WinnersViewController" id="JoY-0C-Efy" customClass="WinnersViewController" customModule="Trivia_Challange" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XPd-Ic-1di">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,9 +187,40 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GEO-p2-UM6">
                                 <rect key="frame" x="50" y="279" width="275" height="332"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="42K-5v-Vst">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="42K-5v-Vst">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="332"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="eNJ-cM-mP2" customClass="WinnersTableViewCell" customModule="Trivia_Challange" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="275" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eNJ-cM-mP2" id="dYH-8l-hG3" customClass="WinnersTableViewCell" customModule="Trivia_Challange" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gt-uY-xj1">
+                                                            <rect key="frame" x="35" y="11" width="205" height="22"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="8gt-uY-xj1" firstAttribute="top" secondItem="dYH-8l-hG3" secondAttribute="topMargin" id="5P6-Y4-qam"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="8gt-uY-xj1" secondAttribute="bottom" id="UDb-kh-xqp"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="8gt-uY-xj1" secondAttribute="trailing" constant="20" id="kMj-SL-xxn"/>
+                                                        <constraint firstItem="8gt-uY-xj1" firstAttribute="leading" secondItem="dYH-8l-hG3" secondAttribute="leadingMargin" constant="20" id="xMn-7X-pCj"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="winnerNamesLabel" destination="8gt-uY-xj1" id="yGB-XX-KpG"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="JoY-0C-Efy" id="VIq-mx-N0s"/>
+                                            <outlet property="delegate" destination="JoY-0C-Efy" id="FwK-r9-z75"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.20122689260563381" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,6 +247,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Y6v-b9-l9F"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="42K-5v-Vst" id="kzS-bQ-omb"/>
+                        <outlet property="totalWinnerLabel" destination="YV8-Ff-HDM" id="0j9-pS-ilX"/>
+                        <outlet property="winnerGetsLabel" destination="YV8-Ff-HDM" id="4k7-4b-50O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrC-ur-MeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

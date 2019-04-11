@@ -14,6 +14,7 @@
 		17A2F316225F34BC00FC04BF /* WinnersNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F315225F34BC00FC04BF /* WinnersNames.swift */; };
 		17A2F318225F35FA00FC04BF /* WinnersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F317225F35FA00FC04BF /* WinnersViewModel.swift */; };
 		17A2F31A225F36EE00FC04BF /* WinnersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F319225F36EE00FC04BF /* WinnersViewController.swift */; };
+		17A2F31C225F4E6C00FC04BF /* WinnersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A2F31B225F4E6C00FC04BF /* WinnersTableViewCell.swift */; };
 		17A5E332225B66DF00D320BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5E331225B66DF00D320BA /* AppDelegate.swift */; };
 		17A5E334225B66DF00D320BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A5E333225B66DF00D320BA /* ViewController.swift */; };
 		17A5E337225B66DF00D320BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A5E335225B66DF00D320BA /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		17A2F315225F34BC00FC04BF /* WinnersNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersNames.swift; sourceTree = "<group>"; };
 		17A2F317225F35FA00FC04BF /* WinnersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersViewModel.swift; sourceTree = "<group>"; };
 		17A2F319225F36EE00FC04BF /* WinnersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersViewController.swift; sourceTree = "<group>"; };
+		17A2F31B225F4E6C00FC04BF /* WinnersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersTableViewCell.swift; sourceTree = "<group>"; };
 		17A5E32E225B66DF00D320BA /* Trivia Challange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trivia Challange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A5E331225B66DF00D320BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17A5E333225B66DF00D320BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				17677F34225E167E00241C98 /* CustomButton.swift */,
+				17A2F31B225F4E6C00FC04BF /* WinnersTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			files = (
 				17677F33225E137800241C98 /* ColorExtension.swift in Sources */,
 				17A2F316225F34BC00FC04BF /* WinnersNames.swift in Sources */,
+				17A2F31C225F4E6C00FC04BF /* WinnersTableViewCell.swift in Sources */,
 				17A5E369225B70AE00D320BA /* TraviaChallangeViewModel.swift in Sources */,
 				17A5E334225B66DF00D320BA /* ViewController.swift in Sources */,
 				17A5E367225B6C7200D320BA /* Questions.swift in Sources */,

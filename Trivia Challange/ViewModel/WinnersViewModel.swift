@@ -11,14 +11,14 @@ import Alamofire
 
 
 protocol WinnersViewDelegate : class {
-    func updatedList()
+    func winnerUpdatedList()
 }
 
 class WinnersViewModel {
     var result: Winners?
     var delegate: WinnersViewDelegate?
     
-    let urlString: String = "http://www.mocky.io/v2/5caefcb83400009f29ab6f54"
+    let urlString: String = "http://www.mocky.io/v2/5caf1ee13400007e2aab70ce"
     
     init() {
         getWinners()
@@ -35,13 +35,17 @@ class WinnersViewModel {
                     let result = try JSONDecoder().decode(Winners.self, from: data)
                     
                     self.result = result
-                    self.delegate?.updatedList()
+                    self.delegate?.winnerUpdatedList()
                     
                 } catch let error {
                     print(error)
                 }
                 self.setLoading(false)
         }
+    }
+    
+    func getListCount() -> Int {
+        return result?.winnersNames.count ?? 0
     }
     
     public func setLoading (_  isLoading : Bool) {

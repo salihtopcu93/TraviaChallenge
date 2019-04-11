@@ -48,7 +48,8 @@ class ViewController: UIViewController {
     
     func configureView() {
         if self.currentQuestionIndex >= 12 {
-            print("bitti")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "WinnersViewController") as! WinnersViewController
+            self.present(vc, animated: true, completion: nil)
         } else {
             let initialQuestion = viewModel.result?.questions[self.currentQuestionIndex]
             self.questionLabel.text = initialQuestion?.question
@@ -72,10 +73,10 @@ class ViewController: UIViewController {
             if isViewerModeOn {
                 questionView.isUserInteractionEnabled = false
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     self.setColor(buttonTag: self.currentAnswerIndex, buttonState: .trueAnswer)
                     
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         self.currentQuestionIndex += 1
                         self.configureView()
                     }
@@ -106,7 +107,7 @@ class ViewController: UIViewController {
             
             setColor(buttonTag: selectedButtonTag, buttonState: .trueAnswer)
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.configureView()
             }
         } else {
@@ -178,7 +179,7 @@ class ViewController: UIViewController {
     @IBAction func buttonSelected(_ sender: UIButton) {
         setColor(buttonTag: sender.tag, buttonState: .selectedAnswer)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.checkAnswer(selectedButtonTag: sender.tag)
         }
         questionView.isUserInteractionEnabled = false
